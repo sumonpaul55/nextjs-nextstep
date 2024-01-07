@@ -1,8 +1,12 @@
-import React from 'react'
 
+import Button from '@/app/components/Button'
+import React from 'react'
 function About() {
     return (
-        <div className='py-20'>This is Mission page</div>
+        <main>
+            <div className='py-20'>This is Mission page</div>
+            <Button></Button>
+        </main>
     )
 }
 

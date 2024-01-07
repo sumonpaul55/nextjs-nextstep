@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image'
 import React from 'react'
-
+import we from "@/public/nextjs.jpg"
 function About() {
     // throw new Error("There was an huge error")
     return (
@@ -24,6 +25,7 @@ function About() {
             lists
             Start with 'Lorem
             ipsum dolor sit amet...'
+            <Image src={we} alt="me, Jhuton da, rupon da" className='w-full mt-3' />
         </div>
     )
 }

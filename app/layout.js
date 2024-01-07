@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`p-6 ${inter.className}`}>
-        <nav>
+        <nav className='pb-2'>
           <ul className='flex gap-4'>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             </li>
           </ul>
         </nav>
-        <hr />
+        <hr className='mb-10' />
         {children}
         <footer>Footer</footer>
       </body>
