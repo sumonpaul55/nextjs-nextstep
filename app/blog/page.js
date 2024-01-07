@@ -1,12 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
+import Link from 'next/link'
 import React from 'react'
 
 function Blog() {
     const blogs = [
         {
+            id: 1,
             tittle: "blog 1",
         },
         {
+            id: 2,
             tittle: "blog 2",
         }
     ]
@@ -17,7 +20,9 @@ function Blog() {
             <ul className='list-disc my-20 font-bold'>
                 {
                     blogs.map((blos, idx) => (
-                        <li key={idx}>{blos.tittle}</li>
+                        <li key={idx}>
+                            <Link href={`blog/${blos.id}`}>{blos.tittle}</Link>
+                        </li>
                     ))
                 }
             </ul>
