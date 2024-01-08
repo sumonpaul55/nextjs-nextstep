@@ -1,10 +1,23 @@
 import { getEachPost } from '@/lib/GetAllPost'
 import React from 'react'
 
+
+
+export async function generateMetadata({ params }) {
+    const { id } = params
+    const post = await getEachPost(id)
+    return {
+        title: post.title,
+        description: post.body
+    }
+}
+
 async function EachPost({ params }) {
     const { id } = params
     // console.log(id)
     const eachPost = await getEachPost(id)
+
+
 
     return (
         <div className='border p-4'>
