@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
+export const metadata = {
+    title: "next app || About",
+    description: "About us next app description"
+}
 function AboutLayout({ children }) {
     return (
         <div>

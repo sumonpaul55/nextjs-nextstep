@@ -25,7 +25,13 @@ function About() {
             lists
             Start with 'Lorem
             ipsum dolor sit amet...'
-            <Image src={we} alt="me, Jhuton da, rupon da" className='w-full mt-3' />
+            <div className='flex gap-20 mt-10'>
+                <div className='w-1/2'>
+                    <Image placeholder='blur' src={we} alt="me, Jhuton da, rupon da" className='mx-auto rounded-lg' quality={100} /></div>
+                <div className='w-1/2 bg-green-600 font-bold text-white text-2xl rounded-lg flex justify-center items-center'>
+                    <h1>All content will go here</h1>
+                </div>
+            </div>
         </div>
     )
 }
