@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
           <ul className='flex gap-4'>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
+            <li><Link href="/posts">posts</Link></li>
             <li className='relative group'><Link href="/blog">Blog</Link>
               <ul className='absolute hidden group-hover:block bg-white p-4 shadow'>
                 <li><Link href="/blog/blog1">Blog</Link></li>
