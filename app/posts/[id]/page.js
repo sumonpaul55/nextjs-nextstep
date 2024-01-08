@@ -1,6 +1,5 @@
 import Comments from '@/app/components/Comments'
-import { metadata } from '@/app/layout'
-import { getEachPost } from '@/lib/GetAllPost'
+import getAllPosts, { getEachPost } from '@/lib/GetAllPost'
 import getAllPostsComments from '@/lib/getPostComment'
 import React, { Suspense } from 'react'
 
@@ -39,3 +38,13 @@ async function EachPost({ params }) {
 }
 
 export default EachPost
+
+
+export async function generateStaticParams() {
+    const posts = await getAllPosts();
+    return posts.map((post) => (
+        {
+            id: post.id.toString()
+        }
+    ))
+}
